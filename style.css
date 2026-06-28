@@ -1,0 +1,98 @@
+:root {
+  --hue: 180;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-color: hsl(var(--hue) 100 95);
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 100px);
+  gap: 25px;
+  padding: 50px;
+  border-radius: 50px;
+  width: min-content;
+  background-color: hsl(var(--hue) 50 95);
+  border: 1px solid hsl(var(--hue) 40 80);
+  box-shadow:
+    0px 0.6px 0.8px hsl(var(--hue) 40 60 / 0.33),
+    0px 11.8px 15.5px -0.6px hsl(var(--hue) 40 60 / 0.55),
+    0.1px 42.7px 56px -1.2px hsl(var(--hue) 40 60 / 0.77);
+}
+
+.color {
+  border-radius: 25px;
+  border: 1px solid hsl(var(--hue) 40 80);
+  box-shadow:
+    0px 0.6px 0.8px hsl(var(--hue) 40 60 / 0.27),
+    0px 10px 13.1px -1.2px hsl(var(--hue) 40 60 / 0.54);
+}
+
+.top {
+  grid-column: span 4;
+  box-shadow:
+    0px 0.6px 0.8px hsl(var(--hue) 40 60 / 0.19),
+    0px 2px 2.6px -1.2px hsl(var(--hue) 40 60 / 0.38);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32px;
+  font-variation-settings: "wght" 500;
+  font-feature-settings: "tnum";
+  color: hsl(var(--hue) 20 20);
+}
+
+.width {
+  color: hsl(var(--hue) 20 20);
+  font-variation-settings: "wght" 400;
+  font-size: 24px;
+}
+
+.height {
+  color: hsl(var(--hue) 20 60);
+  font-variation-settings: "wght" 300;
+  font-size: 24px;
+}
+
+.hue-slider {
+  appearance: none;
+  width: 575px;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    hsl(0deg 75 50),
+    hsl(60 75 50),
+    hsl(120 75 50),
+    hsl(180 75 50),
+    hsl(240 75 50),
+    hsl(300 75 50),
+    hsl(360 75 50)
+  );
+  outline: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.hue-slider::-webkit-slider-runnable-track {
+  height: 10px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.hue-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 10px;
+  border-radius: 5px;
+  background: hsl(var(--hue) 75 50);
+  border: 2px solid #fff;
+}

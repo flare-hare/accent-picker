@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>accent picker</title>
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="palette">
+      <div class="color top" style="background-color: hsl(var(--hue) 0 95)">
+        <h1>1400</h1>
+        <div class="container">
+          <p class="width">Primary text</p>
+          <p class="height">Secondary text</p>
+        </div>
+      </div>
+      <div class="color" style="background-color: hsl(var(--hue) 20 20)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 20 40)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 20 60)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 20 80)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 40 20)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 40 40)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 40 60)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 40 80)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 60 20)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 60 40)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 60 60)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 60 80)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 80 20)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 80 40)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 80 60)"></div>
+      <div class="color" style="background-color: hsl(var(--hue) 80 80)"></div>
+    </div>
+    <input
+      type="range"
+      class="hue-slider"
+      id="hue-slider"
+      min="0"
+      max="360"
+      value="180"
+      step="5"
+    />
+    <script src="main.js"></script>
+  </body>
+</html>
