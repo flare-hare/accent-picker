@@ -1,5 +1,6 @@
 :root {
   --hue: 180;
+  --color-size: clamp(50px, -42.82px + 24.75vw, 100px);
 }
 
 body {
@@ -13,11 +14,11 @@ body {
 
 .palette {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(5, 100px);
-  gap: 25px;
-  padding: 50px;
-  border-radius: 50px;
+  grid-template-columns: repeat(4, var(--color-size));
+  grid-template-rows: repeat(5, var(--color-size));
+  gap: clamp(12px, -10.28px + 5.94vw, 24px);
+  padding: clamp(24px, -24.27px + 12.87vw, 50px);
+  border-radius: clamp(25px, -21.41px + 12.38vw, 50px);
   width: min-content;
   background-color: hsl(var(--hue) 50 95);
   border: 1px solid hsl(var(--hue) 40 80);
@@ -28,7 +29,7 @@ body {
 }
 
 .color {
-  border-radius: 25px;
+  border-radius: clamp(12px, -12.13px + 6.44vw, 25px);
   border: 1px solid hsl(var(--hue) 40 80);
   box-shadow:
     0px 0.6px 0.8px hsl(var(--hue) 40 60 / 0.27),
@@ -40,11 +41,11 @@ body {
   box-shadow:
     0px 0.6px 0.8px hsl(var(--hue) 40 60 / 0.19),
     0px 2px 2.6px -1.2px hsl(var(--hue) 40 60 / 0.38);
-  padding: 25px;
+  padding: clamp(12px, -12.13px + 6.44vw, 25px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 32px;
+  font-size: clamp(16px, -13.70px + 7.92vw, 32px);
   font-variation-settings: "wght" 500;
   font-feature-settings: "tnum";
   color: hsl(var(--hue) 20 20);
@@ -53,18 +54,18 @@ body {
 .width {
   color: hsl(var(--hue) 20 20);
   font-variation-settings: "wght" 400;
-  font-size: 24px;
+  font-size: clamp(12px, -10.28px + 5.94vw, 24px);
 }
 
 .height {
   color: hsl(var(--hue) 20 60);
   font-variation-settings: "wght" 300;
-  font-size: 24px;
+  font-size: clamp(12px, -10.28px + 5.94vw, 24px);
 }
 
 .hue-slider {
   appearance: none;
-  width: 575px;
+  width: clamp(286px, -254.22px + 144.06vw, 577px);
   height: 10px;
   border-radius: 5px;
   background: linear-gradient(
